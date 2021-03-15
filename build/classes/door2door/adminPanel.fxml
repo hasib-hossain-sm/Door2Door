@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="door2door.AdminPanelController">
+   <children>
+      <AnchorPane prefHeight="1000.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="1000.0" prefWidth="200.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton id="BTNS" fx:id="nevbtn_users" onAction="#nevbtn_users_pressed" prefHeight="61.0" prefWidth="250.0" style="-fx-background-color: #43dda1;" text="USERS" textFill="WHITE" />
+                  <JFXButton id="BTNS" fx:id="nevbtn_parcels" onAction="#nevbtn_parcels_pressed" prefHeight="61.0" prefWidth="250.0" style="-fx-background-color: #43dda1;" text="PARCELS" textFill="WHITE" />
+                  <JFXButton id="BTNS" fx:id="nevbtn_deliveryman" graphicTextGap="0.0" onAction="#nevbtn_deliveryman_pressed" prefHeight="61.0" prefWidth="250.0" style="-fx-background-color: #43dda1;" text="DELIVERY MAN" textFill="WHITE" />
+                  <JFXButton id="BTNS" fx:id="nevbtn_customeranalysis" layoutX="10.0" layoutY="320.0" onAction="#nevbtn_customeranalysis_pressed" prefHeight="61.0" prefWidth="250.0" style="-fx-background-color: #43dda1;" text="CUSTOMER ANALYSIS" textFill="WHITE" />
+                  <JFXButton id="BTNS" fx:id="nevbtn_complainbox" onAction="#nevbtn_complainbox_pressed" prefHeight="61.0" prefWidth="250.0" style="-fx-background-color: #43dda1;" text="COMPLAIN BOX" textFill="WHITE" />
+                  <JFXButton id="BTNS" prefHeight="61.0" prefWidth="250.0" style="-fx-background-color: #43dda1;" textFill="WHITE" />
+                  <JFXButton id="BTNS" prefHeight="61.0" prefWidth="250.0" style="-fx-background-color: #43dda1;" textFill="WHITE" />
+                  <JFXButton id="BTNS" prefHeight="61.0" prefWidth="250.0" style="-fx-background-color: #43dda1;" textFill="WHITE" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorpane_deliveryman" layoutX="210.0" layoutY="10.0" prefHeight="1000.0" prefWidth="981.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="1576.0" prefHeight="1000.0" prefWidth="300.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <VBox layoutX="90.0" layoutY="411.0" prefHeight="1000.0" prefWidth="300.0" spacing="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="305.0" promptText="SEARCH BY NAME" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="100.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="172.0" promptText="SEARCH BY ID" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" layoutX="10.0" layoutY="110.0" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="305.0" promptText="SEARCH BY WORKING CITY" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" layoutX="10.0" layoutY="392.0" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="305.0" promptText="SEARCH BY WORKING SUB AREA" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <JFXTreeTableView fx:id="table_food_items1" prefHeight="680.0" prefWidth="844.0" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TreeTableColumn prefWidth="75.0" text="EMPLOYEE&#10;ID" />
+                  <TreeTableColumn prefWidth="75.0" text="NAME" />
+                  <TreeTableColumn prefWidth="75.0" text="PASS" />
+                  <TreeTableColumn prefWidth="75.0" text="EMAIL" />
+                  <TreeTableColumn prefWidth="254.0" text="SALARY" />
+                  <TreeTableColumn minWidth="0.0" prefWidth="0.0" text="ADDRESS&#10;" />
+                  <TreeTableColumn prefWidth="75.0" text="NID" />
+                  <TreeTableColumn prefWidth="75.0" text="PENDING&#10;PARCEL&#10;COUNT" />
+                  <TreeTableColumn prefWidth="75.0" text="RETURNED&#10;PARCEL&#10;COUNT" />
+                  <TreeTableColumn prefWidth="75.0" text="DAMAGED&#10;PARCEL&#10;COUNT&#10;" />
+                  <TreeTableColumn prefWidth="75.0" text="JOINING&#10;DATE" />
+                  <TreeTableColumn prefWidth="75.0" text="WORKING&#10;CITY" />
+                  <TreeTableColumn prefWidth="75.0" text="WORKNG&#10;SUB&#10;AREA" />
+                  <TreeTableColumn prefWidth="75.0" text="COMPLAIN&#10;COUNT" />
+               </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </JFXTreeTableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorpane_users" layoutX="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="1576.0" prefHeight="1000.0" prefWidth="300.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <VBox prefHeight="1000.0" prefWidth="300.0" spacing="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="305.0" promptText="SEARCH BY NAME" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="100.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="172.0" promptText="SEARCH BY ID" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <JFXTreeTableView fx:id="table_food_items" prefHeight="680.0" prefWidth="844.0" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TreeTableColumn prefWidth="75.0" text="USER ID" />
+                  <TreeTableColumn prefWidth="75.0" text="NAME" />
+                  <TreeTableColumn prefWidth="75.0" text="PASSWORD" />
+                  <TreeTableColumn prefWidth="75.0" text="EMAIL" />
+                  <TreeTableColumn prefWidth="254.0" text="TOTAL&#10;PARCEL&#10;COUNT" />
+                  <TreeTableColumn minWidth="0.0" prefWidth="0.0" text="DELIVERED&#10;PARCEL&#10;COUNT" />
+                  <TreeTableColumn prefWidth="75.0" text="PENDING&#10;PARCEL&#10;COUNT" />
+                  <TreeTableColumn prefWidth="75.0" text="RETURNED&#10;PARCEL&#10;COUNT" />
+                  <TreeTableColumn prefWidth="75.0" text="RECEIVED&#10;AMOUNT" />
+                  <TreeTableColumn prefWidth="75.0" text="PENDING&#10;AMOUNT" />
+                  <TreeTableColumn prefWidth="75.0" text="PAYMENT&#10;NUMBER" />
+               </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </JFXTreeTableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorpane_customeranalysis" layoutX="210.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="1576.0" prefHeight="1000.0" prefWidth="300.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <VBox prefHeight="1000.0" prefWidth="300.0" spacing="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="305.0" promptText="SEARCH BY NAME" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="100.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="172.0" promptText="SEARCH BY PHONE NO." unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <JFXTreeTableView fx:id="table_food_items2" prefHeight="680.0" prefWidth="844.0" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TreeTableColumn prefWidth="75.0" text="PHONE" />
+                  <TreeTableColumn prefWidth="75.0" text="NAME" />
+                  <TreeTableColumn prefWidth="75.0" text="SUCCESSFUL&#10;DELIVERY&#10;COUNT&#10;" />
+                  <TreeTableColumn prefWidth="254.0" text="TOTAL&#10;DELIVERY&#10;COUNT" />
+                  <TreeTableColumn minWidth="0.0" prefWidth="0.0" text="TYPE&#10;OF&#10;PRODUCT&#10;" />
+               </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </JFXTreeTableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorpane_complainbox" layoutX="210.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="1576.0" prefHeight="1000.0" prefWidth="300.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <VBox prefHeight="1000.0" prefWidth="300.0" spacing="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="305.0" promptText="SEARCH BY COMPLAIN ID" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="100.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="172.0" promptText="SEARCH BY DELIVERYMAN ID" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <JFXTreeTableView fx:id="table_food_items3" prefHeight="680.0" prefWidth="844.0" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TreeTableColumn prefWidth="75.0" text="COMPLAIN ID" />
+                  <TreeTableColumn prefWidth="75.0" text="DELIVERY MAN ID" />
+                  <TreeTableColumn prefWidth="75.0" text="COMPLAIN" />
+               </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </JFXTreeTableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorpane_parcels" layoutX="210.0" layoutY="10.0" prefHeight="1000.0" prefWidth="981.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="1576.0" prefHeight="1000.0" prefWidth="300.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <VBox layoutX="90.0" layoutY="411.0" prefHeight="1000.0" prefWidth="300.0" spacing="70.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="305.0" promptText="SEARCH BY PARCEL CODE" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="80.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="172.0" promptText="SEARCH BY NAME" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" layoutX="10.0" layoutY="110.0" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="305.0" promptText="SEARCH BY CITY" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" layoutX="10.0" layoutY="392.0" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="305.0" promptText="SEARCH BY SUB AREA" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" layoutX="20.0" layoutY="533.0" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="305.0" promptText="SEARCH BY PHONE NO." unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" layoutX="20.0" layoutY="674.0" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="305.0" promptText="SEARCH BY ASSIGNED DELIVERY MAN" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField focusColor="#00d09f" labelFloat="true" layoutX="20.0" layoutY="665.0" maxWidth="693.0" minWidth="140.0" prefHeight="41.0" prefWidth="305.0" promptText="SEARCH BY USER" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXComboBox prefHeight="25.0" prefWidth="295.0" promptText="SEARCH BY STATUS">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <JFXTreeTableView fx:id="table_food_items11" prefHeight="680.0" prefWidth="844.0" stylesheets="@style.css" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TreeTableColumn prefWidth="75.0" text="PARCEL&#10;CODE&#10;" />
+                  <TreeTableColumn prefWidth="75.0" text="NAME" />
+                  <TreeTableColumn prefWidth="75.0" text="ADDRESS" />
+                  <TreeTableColumn prefWidth="75.0" text="BILL" />
+                  <TreeTableColumn prefWidth="254.0" text="CITY" />
+                  <TreeTableColumn minWidth="0.0" prefWidth="0.0" text="SUB&#10;AREA&#10;" />
+                  <TreeTableColumn prefWidth="75.0" text="INSTRUCTION" />
+                  <TreeTableColumn prefWidth="75.0" text="SENT&#10;FROM" />
+                  <TreeTableColumn prefWidth="75.0" text="ASSIGNED&#10;DELIVERY&#10;MAN&#10;" />
+                  <TreeTableColumn prefWidth="75.0" text="PHONE&#10;NO.&#10;" />
+                  <TreeTableColumn prefWidth="75.0" text="CONFIRMATION&#10;CODE&#10;" />
+                  <TreeTableColumn prefWidth="75.0" text="TYPE&#10;OF&#10;PARCEL&#10;" />
+               </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </JFXTreeTableView>
+            <AnchorPane fx:id="anchorpane_delivery_status_1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0">
+               <children>
+                  <Circle fill="#43dda1" layoutX="244.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="4.0" layoutX="254.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Circle fill="WHITE" layoutX="464.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="WHITE" layoutX="904.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="WHITE" layoutX="684.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="4.0" layoutX="474.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="4.0" layoutX="694.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Label layoutX="498.0" layoutY="23.0" text="DELIVERY STATUS FOR SELECTED PARCEL">
+                     <font>
+                        <Font name="System Italic" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="213.0" layoutY="108.0" text="BOOKED">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="810.0" layoutY="108.0" text="SUCCESSFULLY DELIVERED">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="642.0" layoutY="108.0" text="IN TRANSIT">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="426.0" layoutY="108.0" text="PICKED UP">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="WHITE" layoutX="1124.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label layoutX="1032.0" layoutY="108.0" text="UNSUCCESSFUL DELIVERY">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorpane_delivery_status_2" layoutX="10.0" layoutY="810.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0">
+               <children>
+                  <Circle fill="#43dda1" layoutX="244.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#43dda1" height="4.0" layoutX="254.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Circle fill="#43dda1" layoutX="464.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="WHITE" layoutX="904.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="WHITE" layoutX="684.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="4.0" layoutX="474.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="4.0" layoutX="694.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Label layoutX="498.0" layoutY="23.0" text="DELIVERY STATUS FOR SELECTED PARCEL">
+                     <font>
+                        <Font name="System Italic" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="213.0" layoutY="108.0" text="BOOKED">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="810.0" layoutY="108.0" text="SUCCESSFULLY DELIVERED">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="642.0" layoutY="108.0" text="IN TRANSIT">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="426.0" layoutY="108.0" text="PICKED UP">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="WHITE" layoutX="1124.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label layoutX="1032.0" layoutY="108.0" text="UNSUCCESSFUL DELIVERY">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorpane_delivery_status_4" layoutX="10.0" layoutY="810.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0">
+               <children>
+                  <Circle fill="#43dda1" layoutX="244.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#43dda1" height="4.0" layoutX="254.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Circle fill="#43dda1" layoutX="464.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#43dda1" layoutX="904.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#43dda1" layoutX="684.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#43dda1" height="4.0" layoutX="474.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#43dda1" height="4.0" layoutX="694.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Label layoutX="498.0" layoutY="23.0" text="DELIVERY STATUS FOR SELECTED PARCEL">
+                     <font>
+                        <Font name="System Italic" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="213.0" layoutY="108.0" text="BOOKED">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="810.0" layoutY="108.0" text="SUCCESSFULLY DELIVERED">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="642.0" layoutY="108.0" text="IN TRANSIT">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="426.0" layoutY="108.0" text="PICKED UP">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="WHITE" layoutX="1124.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label layoutX="1032.0" layoutY="108.0" text="UNSUCCESSFUL DELIVERY">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorpane_delivery_status_5" layoutX="10.0" layoutY="810.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0">
+               <children>
+                  <Circle fill="#43dda1" layoutX="244.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#43dda1" height="4.0" layoutX="254.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Circle fill="#43dda1" layoutX="464.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="WHITE" layoutX="904.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#43dda1" layoutX="684.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#43dda1" height="4.0" layoutX="474.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="4.0" layoutX="694.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Label layoutX="498.0" layoutY="23.0" text="DELIVERY STATUS FOR SELECTED PARCEL">
+                     <font>
+                        <Font name="System Italic" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="213.0" layoutY="108.0" text="BOOKED">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="810.0" layoutY="108.0" text="SUCCESSFULLY DELIVERED">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="642.0" layoutY="108.0" text="IN TRANSIT">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="426.0" layoutY="108.0" text="PICKED UP">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="RED" layoutX="1124.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label layoutX="1032.0" layoutY="108.0" text="UNSUCCESSFUL DELIVERY">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorpane_delivery_status_3" layoutX="10.0" layoutY="810.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0">
+               <children>
+                  <Circle fill="#43dda1" layoutX="244.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#43dda1" height="4.0" layoutX="254.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Circle fill="#43dda1" layoutX="464.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="WHITE" layoutX="904.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fill="#43dda1" layoutX="684.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#43dda1" height="4.0" layoutX="474.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="4.0" layoutX="694.0" layoutY="79.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Label layoutX="498.0" layoutY="23.0" text="DELIVERY STATUS FOR SELECTED PARCEL">
+                     <font>
+                        <Font name="System Italic" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="213.0" layoutY="108.0" text="BOOKED">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="810.0" layoutY="108.0" text="SUCCESSFULLY DELIVERED">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="642.0" layoutY="108.0" text="IN TRANSIT">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="426.0" layoutY="108.0" text="PICKED UP">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="WHITE" layoutX="1124.0" layoutY="81.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label layoutX="1032.0" layoutY="108.0" text="UNSUCCESSFUL DELIVERY">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
